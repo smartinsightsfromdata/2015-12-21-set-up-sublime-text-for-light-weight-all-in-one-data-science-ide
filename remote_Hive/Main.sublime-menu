@@ -19,7 +19,7 @@
                                  "osx": "utf-8"},
                     "cmd": {"windows": ["cmd.exe"],
                             "linux": ["bash", "-i"],
-                            "osx": ["bash", "-i","/PUTTHISFILEONREMOTE/remote_hive_sublime_config.sh"]},
+                            "osx": ["bash", "-i","/PATHTOTHISFILE/remote_hive_sublime_config.sh"]},
                     "cwd": "$file_path",
                     "cmd_postfix": "\n", 
                     "env": {},
