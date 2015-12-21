@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "SublimeREPL: Hive",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_remote_hive",
+            "file": "config/remote_Hive/Main.sublime-menu"
+        }
+    }
+]

@@ -1,0 +1,86 @@
+[
+     {
+        "id": "tools",
+        "children":
+        [{
+            "caption": "SublimeREPL",
+            "mnemonic": "R",
+            "id": "SublimeREPL",
+            "children":
+            [
+                {"caption": "remote_Python",
+                "id": "remote_Python",
+
+                 "children":[
+                    {"command": "repl_open",
+                     "caption": "remote_Python",
+                     "id": "repl_remote_python",
+                     "mnemonic": "P",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "cmd": ["ssh","REMOTENAME","python", "-i", "-u"],
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {"PYTHONIOENCODING": "utf-8"}
+                        }
+                    },
+                    {"command": "remote_python_virtualenv_repl",
+                     "id": "remote_python_virtualenv_repl",
+                     "caption": "remote_Python - virtualenv"},
+                    {"command": "repl_open",
+                     "caption": "Python - PDB current file",
+                     "id": "repl_remote_python_pdb",
+                     "mnemonic": "D",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "cmd": ["ssh","REMOTENAME","python", "-i", "-u", "-m", "pdb", "$file_basename"],
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {"PYTHONIOENCODING": "utf-8"}
+                        }
+                    },
+                    {"command": "repl_open",
+                     "caption": "remote_Python - RUN current file",
+                     "id": "repl_remote_python_run",
+                     "mnemonic": "R",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "cmd": ["ssh","remote","python", "-u", "$file_basename"],
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {"PYTHONIOENCODING": "utf-8"}
+                        }
+                    },
+                    {"command": "repl_open",
+                     "caption": "remote_Python - IPython",
+                     "id": "repl_remote_python_ipython",
+                     "mnemonic": "I",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "autocomplete_server": true,
+                        "cmd": {
+                            "osx": ["ssh","REMOTENAME","python","-u", "/home/yuki/ipy_repl.py"],
+                            "linux": ["python", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"],
+                            "windows": ["python", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"]
+                        },
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {
+                            "PYTHONIOENCODING": "utf-8",
+                            "SUBLIMEREPL_EDITOR": "$editor"
+                        }
+                    }
+                    }
+                ]}
+            ]
+        }]
+    }
+]

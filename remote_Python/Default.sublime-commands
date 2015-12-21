@@ -1,0 +1,38 @@
+[
+    {
+        "caption": "SublimeREPL: remote_Python",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_remote_python",
+            "file": "config/remote_Python/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "SublimeREPL: remote_Python - PDB current file",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_remote_python_pdb",
+            "file": "config/remote_Python/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "SublimeREPL: remote_Python - RUN current file",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_remote_python_run",
+            "file": "config/remote_Python/Main.sublime-menu"
+        }
+    },
+    {
+        "command": "remote_python_virtualenv_repl",
+        "caption": "SublimeREPL: remote_Python - virtualenv"
+    },
+    {
+        "caption": "SublimeREPL: remote_Python - IPython",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_remote_python_ipython",
+            "file": "config/remote_Python/Main.sublime-menu"
+        }
+    }
+]
