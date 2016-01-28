@@ -24,7 +24,7 @@
                     "cmd_postfix": "\n", 
                     "env": {},
                     "suppress_echo": true, 
-                    "external_id": "shell",
+                    "external_id": "hive",
                     "syntax": "Packages/Text/Plain text.tmLanguage"
                     }
                 }
